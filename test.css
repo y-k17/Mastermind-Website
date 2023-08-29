@@ -1,0 +1,296 @@
+:root {
+    font-size: 1.3em;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Updated background color */
+    font-family: sans-serif;
+    color: antiquewhite;
+    scroll-behavior: smooth;
+    transition-duration: 2s;
+    overflow-x: hidden;
+  }
+  
+  h1,
+  h2,
+  p,
+  a {
+    margin: 1rem;
+  }
+  
+  #logo {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 70%;
+    height: auto;
+  }
+  
+  nav {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    height: 3rem;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    border-width: 0.3rem;
+    margin: 0;
+    border-style: outset;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    margin: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: antiquewhite;
+    display: inline-block;
+  }
+  
+  .navbar li {
+    padding-top: 1rem;
+    padding-left: 2px;
+    padding-bottom: 1rem;
+    font-size: 2vw;
+  }
+  
+  .navbar > ul {
+    list-style-type: none;
+    display: inline-flex;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar li:hover {
+    background-color: grey;
+    transition: 1.5s;
+  }
+  
+  .logo-img {
+    padding-top: 20vh;
+    min-height: 100vh;
+    background-color: black; /* Updated background color */
+  }
+  
+  #arrow {
+    max-width: 10vw;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vw;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1,
+    h2,
+    p,
+    a {
+      font-size: 3.5vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1,
+    h2,
+    p,
+    a {
+      font-size: 3.5vw;
+    }
+  }
+  
+  /* New CSS styles for content below the navbar */
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  #1,
+  #2,
+  #3,
+  #4 {
+    background-color: black; /* Updated background color */
+    padding: 3rem;
+  }
+  
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  h2 {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 0;
+    background-color: #000000;
+    padding: 2rem;
+  }
+  
+  ul.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul.social-links li {
+    margin: 0 10px;
+  }
+  
+  ul.social-links li a {
+    color: #007bff;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+  
+  ul.social-links li a:hover {
+    color: #0056b3;
+  }
+  
+  .contact-info {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+  }
+  
+  .contact-info li {
+    margin-bottom: 0.5rem;
+  }
+
+  #3 h2 {
+    font-size: 1.8rem; /* Adjusted font size */
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  #3 p {
+    font-size: 1rem; /* Adjusted font size */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  
+  #4 h2 {
+    font-size: 1.8rem; /* Adjusted font size */
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  #4 p {
+    font-size: 1rem; /* Adjusted font size */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  
+  /* Adjust the font size for labels in the form */
+.container label {
+    font-size: 1rem; /* Adjust the font size as needed */
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Adjust the font size and padding for input fields in the form */
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="tel"] {
+    width: 100%;
+    padding: 0.4rem; /* Adjust the padding as needed */
+    font-size: 0.9rem; /* Adjust the font size as needed */
+    margin-bottom: 0.8rem; /* Adjust the margin as needed */
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ccc;
+  }
+  
+  /* Adjust the font size for the submit button */
+  .container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem; /* Adjust the padding as needed */
+    font-size: 0.9rem; /* Adjust the font size as needed */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .slide-in {
+    opacity: 0;
+    transform: translateX(100px); /* Adjust the distance as needed */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .slide-in.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-in.inactive {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+  }

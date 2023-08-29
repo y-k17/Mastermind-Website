@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastermind Chess</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="logo-img">
+    <img id="logo" src="Logo_with_name_nobg.png">
+    <a href="#1"><img id="arrow" src="arrow-down.png"></a>
+  </div>
+  <nav id="navig" class="navbar">
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#1">Home</a></li>
+      <li><a href="#2">Programs</a></li>
+      <li><a href="#3">Advantages</a></li>
+      <li><a href="#4">Registration</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="1" class="home slide-in inactive" >
+    <h1>Welcome to Mastermind Chess Academy</h1>
+    <img src="testimg.jpg" alt="Chess Academy">
+    <p>
+      Elevate your chess skills with Mastermind Chess Academy. Our 
+personalized coaching and engaging programs are designed to ignite a 
+passion for chess in students of all ages. Join us to embark on a 
+journey of strategy, critical thinking, and fun.
+    </p>
+  </div>
+
+  <!-- Programs Section -->
+  <div id="2" class="programs slide-in inactive">
+    <h1>Programs</h1>
+    <img src="image1.jpg" alt="Programs">
+    <p>
+      Our chess programs cater to every level of expertise, from 
+beginners to advanced players. Uncover the world of chess through 
+interactive lessons, enriching your mind and enhancing problem-solving 
+abilities. Join us to explore the art of chess.
+    </p>
+  </div>
+
+  <!-- Advantages Section -->
+  <div id="3" class="why slide-in inactive">
+    <h1>Why Choose Mastermind Chess Academy?</h1>
+    <img src="image2.jpg">
+
+    <h2>Expert Coaches</h2>
+    <p>
+      Learn from seasoned chess professionals dedicated to nurturing 
+your potential. Our coaches provide individualized attention, fostering 
+growth and confidence in players of all ages.
+    </p>
+
+    <h2>Personalized Learning</h2>
+    <p>
+      Experience tailored coaching that adapts to your pace and style. 
+Our one-on-one sessions empower you to grasp chess strategies while 
+building valuable life skills.
+    </p>
+
+    <h2>Comprehensive Curriculum</h2>
+    <p>
+      Discover a structured curriculum that takes you from chess basics 
+to advanced techniques. Develop critical thinking and strategic planning
+ that extend beyond the game.
+    </p>
+
+    <h2>Interactive Experience</h2>
+    <p>
+      Engage in real-time learning with our interactive platform. Ask 
+questions, analyze games, and receive instant feedback, all while 
+enjoying the thrill of chess.
+    </p>
+  </div>
+
+  <!-- Registration Section -->
+  <div id="4" class="registration slide-in inactive">
+    <h1>Registration</h1>
+    <img src="image3.png">
+
+    <h2>Join Mastermind Chess Academy Today!</h2>
+    <p>
+      Begin your chess journey by taking the first step with us:
+    </p>
+
+    <div class="container">
+      <h2>Contact Information</h2>
+      <form action="https://getform.io/f/e5778e65-9745-4ae9-acde-d8c0ecff1dce" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required="">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required="">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required="">
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <p>
+      Unlock the world of chess and enhance your cognitive skills. Join 
+Mastermind Chess Academy and embrace the joy of learning through the art
+ of chess.
+    </p>
+
+    <h2>Get in Touch</h2>
+    <p>
+      Have questions or feedback? Reach out to us:
+    </p>
+
+    <ul class="contact-info">
+      <li>Email: mastermind.chess.online@gmail.com</li>
+      <li>Phone: +91 6282837723</li>
+    </ul>
+
+    <h2>Follow Us</h2>
+    <p>
+      Stay updated by following us on social media:
+    </p>
+
+    <ul class="social-links">
+      <li><a href="https://www.instagram.com/mastermindchess">Instagram</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript to trigger the slide-in animation
+    const sections = document.querySelectorAll(".slide-in");
+
+function checkSlide() {
+  sections.forEach(section => {
+    const slideInAt = window.scrollY + window.innerHeight - section.clientHeight / 2;
+    const sectionBottom = section.offsetTop + section.clientHeight;
+    const isHalfShown = slideInAt > section.offsetTop;
+    const isNotScrolledPast = window.scrollY < sectionBottom;
+
+    if (isHalfShown && isNotScrolledPast) {
+      section.classList.add("active");
+      section.classList.remove("inactive");
+      section.style.visibility = "visible"; // Show the section
+    } else {
+      section.classList.remove("active");
+      section.classList.add("inactive");
+      section.style.visibility = "hidden"; // Hide the section
+    }
+  });
+}
+
+window.addEventListener("scroll", checkSlide);
+
+// JavaScript to scroll to the target section when the link is clicked
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll(".navbar a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const offset = targetSection.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: offset,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+
+
+  </script>
+
+
+</body></html>
