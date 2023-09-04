@@ -31,6 +31,7 @@
   nav {
     margin-left: 5vw;
     margin-right: 5vw;
+    width: 100vw;
   }
   
   .navbar {
@@ -290,7 +291,7 @@
   }
 
   .slide-in.inactive {
-    opacity: 0;
-    transform: translateX(100px);
+    opacity: 1;
+    transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
   }
